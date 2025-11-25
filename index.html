@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/img/images/logo_color.png">
+  <title>완벽한 하루</title>
+  <!-- 외부 라이브러리-->
+  <script src="/assets/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- css -->
+  <link rel="stylesheet" href="/assets/common.css">
+  <!-- Router(ES Module) -->
+  <script type="module" src="/assets/app.js"></script>
+  
+</head>
+<body>
+  <!-- header -->
+  <header>
+    <div class="inner">
+      <div class="header-left">
+        <h1 class="logo"><a href="/home"><img src="assets/img/svg/logo.svg" alt="logo"></a></h1>
+      </div>
+      <div class="header-right">
+        <button class="icon-search"><img src="assets/img/svg/icon-search.svg" alt="search icon"></button>
+        <button class="trigger"><img src="assets/img/svg/icon-trigger.svg" alt="menu icon"></button>
+      </div>
+    </div>
+  </header>
+
+  <!-- hamburger click -->
+  <aside>
+    <div class="aside-header">
+      <div class="inner">
+        <div class="aside-top">
+          <button class="aside-close"><img src="/assets/img/svg/icon-close.svg" alt="close icon"></button>
+          <div>
+            <button class="aside-alarm"><img src="/assets/img/svg/icon-alarm.svg" alt="alarm icon"></button>
+            <button class="aside-setting"><img src="/assets/img/svg/icon-setting.svg" alt="setting icon"></button>
+          </div>
+        </div>
+        <div class="aside-profile">
+          <img src="/assets/img/images/profile-W.png" alt="profile img">
+          <div class="info">
+            <h3 class="section-title">지은 님</h3>
+            <p class="d-day content-text">💘 D+365</p>
+            <button class="edit-btn section-title-sub">프로필 편집</button>
+          </div>
+        </div>
+        <div class="aside-btn half-btn-wrap">
+          <a href="#" class="btn half">연결끊기</a>
+          <a href="#" class="btn half">로그아웃</a>
+        </div>
+      </div>
+    </div>
+    <div class="inner">
+      <ul class="aside-menu">
+        <li>
+          <a href="/home">
+            <img src="assets/img/svg/icon-menu-home.svg" alt="home">
+            <span class="section-title">홈 <i class="fa-solid fa-angle-right"></i></span>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <img src="assets/img/svg/icon-menu-course.svg" alt="course">
+            <span class="section-title">코스</span>
+          </a>
+          <ul class="aside-menu-sub">
+            <li><a href="/">AI 코스 플래너</a></li>
+            <li><a href="/">인기코스</a></li>
+            <li><a href="/">코스 만들기</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/">
+            <img src="assets/img/svg/icon-menu-map.svg" alt="map">
+            <span class="section-title">스팟</span>
+          </a>
+          <ul class="aside-menu-sub">
+            <li><a href="/">테마별 스팟</a></li>
+            <li><a href="/">맛집</a></li>
+            <li><a href="/">카페</a></li>
+            <li><a href="/">놀거리+</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/">
+            <img src="assets/img/svg/icon-menu-sale.svg" alt="sale">
+            <span class="section-title">퍼펙트딜</span>
+          </a>
+          <ul class="aside-menu-sub">
+            <li><a href="/">오늘의 퍼펙트딜</a></li>
+            <li><a href="/">가격대별 BEST</a></li>
+            <li><a href="/">원클릭 패키지</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="/">
+            <img src="assets/img/svg/icon-menu-user.svg" alt="user">
+            <span class="section-title">마이페이지 <i class="fa-solid fa-angle-right"></i></span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </aside>
+
+
+  <!-- bottom-nav -->
+  <div class="bottom-nav">
+    <div class="inner">
+      <ul class="bottom-nav-menu">
+        <li>
+          <a href="/home">
+            <img src="assets/img/svg/icon-nav-home-deactive.svg" alt="sale">
+            <p class="section-title">홈</p>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <img src="assets/img/svg/icon-nav-calendar-deactive.svg" alt="sale">
+            <p class="section-title">일정</p>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <img src="assets/img/svg/icon-nav-location-deactive.svg" alt="sale">
+            <p class="section-title">내주변</p>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <img src="assets/img/svg/icon-nav-heart-deactive.svg" alt="sale">
+            <p class="section-title">위시</p>
+          </a>
+        </li>
+        <li>
+          <a href="/">
+            <img src="assets/img/svg/icon-nav-user-deactive.svg" alt="sale">
+            <p class="section-title">마이</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="/assets/common.js"></script>
+</body>
+</html>
