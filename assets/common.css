@@ -887,8 +887,8 @@ aside .aside-btn .btn.half{
     p{
       font-family: 'Paperozi';
       font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--variant);
+      font-weight: 600;
+      color: var(--primary);
       margin-top: 0.5rem;
       transition: 0.2s ease-in-out;
     }
@@ -935,4 +935,3 @@ aside .aside-btn .btn.half:hover{
   background-color: var(--primary);
   color: #fff;
 }
-.bottom-nav-menu li:hover a p{color: var(--primary);}
