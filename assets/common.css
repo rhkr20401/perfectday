@@ -140,9 +140,11 @@ button{cursor: pointer;}
 
 
 /* section공통 */
-section{
-  width: 100%;
+.app{
+  margin-top: 5.5rem;
 }
+section{width: 100%;}
+section:last-of-type{padding-bottom: 9rem;}
 .inner{
   padding: 0 2rem;
   margin: auto;

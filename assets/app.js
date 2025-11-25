@@ -5,8 +5,7 @@ const appEl = document.querySelector('#app');
 const BASE = location.origin;
 
 const routes = {
-  '/':        { id: 'onboarding', file: '/pages/onboarding.html' },
-  '/home':   { id: 'home', file: '/pages/home.html' },
+  '/':   { id: 'home', file: '/pages/home.html' },
   '/detail-spot':{ id: 'detail-spot', file: '/pages/detail-spot.html' },
   '/detail-sale-01': { id: 'detail-sale-01', file: '/pages/detail-sale-01.html' },
   '/detail-sale-02': { id: 'detail-sale-02', file: '/pages/detail-sale-02.html' },
