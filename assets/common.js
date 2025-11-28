@@ -32,6 +32,16 @@ asideCloseBtn.addEventListener('click',()=>{
   body.classList.remove('aside-active');
 });
 
+function closeAside() {
+  document.body.classList.remove('aside-active');
+}
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[data-link]');
+  if (link) {
+    closeAside();
+  }
+});
+window.addEventListener('popstate', closeAside);
 
 /* 
 각자 필요한 내용 복붙으로 사용
