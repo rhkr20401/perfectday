@@ -2,8 +2,7 @@
 
 @import url(../common.css);
 
-/* Icon Font CDN */
-@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css');
+
 
 html{font-size: 62.5%;}
 
