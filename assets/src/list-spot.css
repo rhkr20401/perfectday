@@ -1,0 +1,43 @@
+section.first-section{padding-top: 2.5rem;}
+section.last-section{padding-bottom: 2rem;}
+
+.spot-list-title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.spot-list-title-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.spot-list-title-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.spot-list{
+  margin-bottom: 2rem;
+}
+.chips li.winter-special {
+  background-color: #3FA2FF !important;
+  border: 1px solid #3FA2FF;
+}
+.chips {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  user-select: none;
+  scrollbar-width: none;
+}
+
+.chips::-webkit-scrollbar {
+  display: none;
+}
+
+.chips li {
+  flex-shrink: 0;
+}

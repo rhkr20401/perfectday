@@ -8,16 +8,32 @@ export default{
     $(this).find('.company-info').stop().slideToggle(300);
   });
 
+  //모달 열기
+  $(document).on('click', '.makecourse-save-btn', function(e){
+    e.preventDefault();
+    $('.makecourse-modal').fadeIn();
+  });
+
+  //모달 안 확인 버튼
+  $(document).on('click', '.makecourse-modal-btn', function(e){
+    e.preventDefault();
+
+    localStorage.setItem('showFirstMycourseCard', 'true');
+
+    window.location.href = '/mycourse';
+  });
+
+
+
   //makercourse
-   // 0: card1, 1: card2, 2: card3 ...
   $('.makecourse-card').each(function (i) {
     $(this).data('origIndex', i);
   });
 
   const distances = {
-    '0-1': '109m',  // 1 → 2
-    '1-2': '360m',  // 2 → 3
-    '0-2': '360m'   // 1 → 3 (2 삭제 시)
+    '0-1': '109m', 
+    '1-2': '360m',  
+    '0-2': '360m'   
   };
 
   function reorderCircleNums() {
@@ -49,19 +65,6 @@ export default{
       $meter.find('.makecourse-circle-num').text(distanceText);
       $meter.show();
 
-      //makecourse-save-btn
-      $('.makecourse-save-btn').click(function(){
-        $('.makecourse-modal').fadeIn();
-      });
-
-      //makecourse-modal-btn
-      $('.makecourse-modal-btn').on('click', function () {
-        localStorage.setItem('showFirstMycourseCard', 'true');
-        
-        // mycourse.html로 이동
-        window.location.href = '/mycourse';
-      });
-
     });
   }
 
@@ -74,10 +77,9 @@ export default{
     $meterLi.hide();
 
     reorderCircleNums(); 
-    updateMeters();      
+    updateMeters();     
   });
 
-  // 초기 한 번 세팅해두기
   reorderCircleNums();
   updateMeters();
 });
@@ -92,5 +94,6 @@ document.querySelectorAll('.rating').forEach(rating => {
   rating.style.setProperty('--rateWidth', (rate / 5 * 100) + '%');
   score.textContent = rate;
 });
+
   }
 }

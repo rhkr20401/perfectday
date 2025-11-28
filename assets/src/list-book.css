@@ -1,0 +1,81 @@
+.book-list-title{
+  margin-bottom: 2rem;
+  b{color: var(--primary);}
+} 
+.book{
+  border: 1px solid var(--gray100);
+  padding: 1.2rem 1rem;
+  border-radius: 1rem;
+}
+.book:first-of-type{margin-bottom: 2rem;}
+
+.book-card{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.book-stat{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.book-inner{
+  height: 15rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--gray100);
+}
+.book-inner-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+.book-inner-right{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.book-text{
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.book-text:last-of-type{gap: 0.7rem;}
+.book-cost{
+  font-weight: 600;
+}
+img{
+  position: relative;
+}
+/* sale-mark */
+.sale-mark{
+  position: absolute; 
+  top: 0;
+  left: 0.6rem;
+  width: 3.5rem;
+  height: 4.5rem;
+  clip-path: polygon(20% 0%, 0 0, 0 50%, 0 100%, 0 100%, 50% 80%, 100% 100%, 100% 100%, 100% 51%, 100% 0, 80% 0%, 50% 0);
+  background: var(--gradient);
+  box-shadow: 0 2px 2px 0 rgba(255, 72, 142, 0.25);
+  p{
+    text-align: center;
+    font-family: 'Paperlozi';
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1.2rem;
+    padding-top: 0.4rem;
+  }
+}
+
+section.first-section{padding-top: 2.5rem; margin-bottom: 2rem;}
+section.last-section{padding-bottom: 2rem;}
