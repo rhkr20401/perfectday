@@ -1,0 +1,23 @@
+.sale-list-title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.sale-list-title-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sale-list-title-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sale-list{
+  margin-bottom: 2rem;
+}
+section.first-section{padding-top: 2.5rem;}
+section.last-section{padding-bottom: 2rem;}
