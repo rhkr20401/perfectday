@@ -1,3 +1,5 @@
+export default{
+  init(root){
 let currentYear = 2025;
 let currentMonth = 10;
 
@@ -360,3 +362,5 @@ mpConfirmBtn.addEventListener("click", () => {
 });
 
 renderCalendar(currentYear, currentMonth);
+  }
+}
