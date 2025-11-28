@@ -1,5 +1,4 @@
 section.first-section{padding-top: 2.5rem;}
-section.last-section{padding-bottom: 2rem;}
 
 .spot-list-title{
   width: 100%;
@@ -22,22 +21,21 @@ section.last-section{padding-bottom: 2rem;}
 .spot-list{
   margin-bottom: 2rem;
 }
-.chips li.winter-special {
-  background-color: #3FA2FF !important;
-  border: 1px solid #3FA2FF;
-}
 .chips {
   display: flex;
   overflow-x: auto;
   overflow-y: hidden;
   user-select: none;
   scrollbar-width: none;
+  margin-bottom:1rem ;
 }
-
 .chips::-webkit-scrollbar {
   display: none;
 }
-
 .chips li {
   flex-shrink: 0;
+}
+.chips li[data-category="winter"].active {
+  background-color: #3FA2FF; 
+  border: 0.07rem solid #3FA2FF; 
 }

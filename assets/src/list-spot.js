@@ -3,21 +3,16 @@ export default{
     $(function(){
   
     //chips
-    $('.chips li').on('click',function(){
-      const category = $(this).data('category');
-        $('.chips li[data-category="winter"]').removeClass('winter-special');
-      $(this).addClass('active').siblings().removeClass('active');
+      $('.category-chips li').on('click',function(){
+        const category = $(this).data('category');
+        $(this).addClass('active').siblings().removeClass('active');
 
-      if(category === 'winter'){
-      $(this).addClass('winter-special');
-    }
-
-      if(category==='all'){
-        $('.spot-list li').show();
-      }else{
-        $('.spot-list li').hide().filter(`[data-category="${category}"]`).show();
-      }
-    });
+        if(category==='all'){
+          $('.category-list li').show();
+        }else{
+          $('.category-list li').hide().filter(`[data-category="${category}"]`).show();
+        }
+      });
 
 
     //icon-heart-wish
