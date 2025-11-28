@@ -81,5 +81,3 @@ document.querySelectorAll('.rating').forEach(rating => {
   rating.style.setProperty('--rateWidth', (rate / 5 * 100) + '%');
   score.textContent = rate;
 });
-
-*/
