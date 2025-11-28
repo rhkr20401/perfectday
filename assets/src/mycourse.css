@@ -1,0 +1,81 @@
+.mycourse{
+  padding-top: 2.5rem;
+}
+h3.mycourse-title{margin-bottom: 2rem;}
+h3.mycourse-title .mycourse-title-num{color: var(--primary);}
+
+/* mycourse-card_______________________ */
+.mycourse-card{width: 100%;}
+.mycourse-card:first-of-type{
+  padding-bottom: 2rem;
+  border-bottom: 0.1rem solid var(--gray200);
+  margin-bottom: 2rem;
+  display: none;
+}
+.mycourse-card:last-of-type{
+  margin-bottom: 7rem;
+}
+.mycourse-inner .mycourse-card-title{
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-text);
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+.mycourse-inner .mycourse-txt{
+  font-size: 1.3rem;
+  color: var(--secondary-text);
+  margin-bottom: 1rem;
+}
+.mycourse-inner .mycourse-course{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mycourse-course .mycourse-course-card{
+  .store-box{
+    display: flex;
+    align-items: center;
+    column-gap: 0.5rem;
+    margin-top: 0.5rem;
+    .store-box-icon{
+      width: 1.7rem;
+      height: 1.7rem;
+    }
+    .store-box-name{
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--primary-text);
+    }
+  }
+}
+.mycourse-course .mycourse-course-arrow{
+  width: 2rem;
+  height: 2rem;
+  background-color: var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .fa-solid.fa-angle-up{
+    color: var(--white);
+    transform: rotate(90deg);
+    font-size: 1.2rem;
+  }
+}
+
+/* plus btn____________________________ */
+.btn.stroke.mycourse-plus{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  .fa-regular.fa-plus{
+    font-size: 1.2rem;
+  }
+}
+
+footer{
+  margin-top: 3rem;
+}
+
