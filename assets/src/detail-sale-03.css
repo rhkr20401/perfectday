@@ -130,9 +130,14 @@
   top: 7rem;
   z-index: 50;
 }
+.detail.tab-menu li{
+  padding: 0;
+}
 .detail.tab-menu a{
   font-weight: 500;
-  padding: 2rem 3rem;
+  display: block;
+  height: 5.8rem;
+  line-height: 5.5rem;
 }
 .detail .tab-menu li.active a{
   width: 100%;
@@ -259,6 +264,13 @@
   .menu-img{
     display: flex;
     column-gap: 0.3rem;
+    overflow-x: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    cursor: grab;
+    &::-webkit-scrollbar {
+      display: none;
+    }
     li{
       width: 10rem;
       height: 10rem;
@@ -692,7 +704,7 @@ body.book-active .book-overlay {
   opacity: 0.6;
   pointer-events: auto;
 }
-body.book-active .book-modal{transform: none;}
+body.book-active .book-modal{transform: translateY(0);}
 .time-item .time-row .time:hover,
 .time-item .time-row .time.active{
   color: var(--primary);
@@ -704,4 +716,3 @@ body.book-active .book-modal{transform: none;}
 .sale-acco.active .acc-title i{transform: rotate(180deg);}
 .book-sale-item:hover,
 .book-sale-item.active{border: 0.2rem solid var(--primary);}
-
