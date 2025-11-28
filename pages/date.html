@@ -1,0 +1,73 @@
+<section>
+  <div class="inner">
+    <div class="calendar-wrapper">
+      <div class="calendar-header" id="monthSelectorToggle">
+        <div class="current-month">
+          <span id="monthLabel"></span>
+          <img src="/assets/img/svg/icon-arrow-down.png" class="month-arrow" alt="">
+        </div>
+      </div>
+
+      <div class="calendar-weekdays">
+        <div>일</div>
+        <div>월</div>
+        <div>화</div>
+        <div>수</div>
+        <div>목</div>
+        <div>금</div>
+        <div>토</div>
+      </div>
+
+      <div class="calendar-body" id="calendarBody"></div>
+
+      <div class="line-thick"></div>
+
+      <div class="event-panel">
+        <div class="selected-date-text" id="selectedDateText">
+          날짜를 선택해주세요.
+        </div>
+        <div class="event-list" id="eventList"></div>
+
+        <button class="add-event-btn" id="addEventBtn" style="display:none;">
+          일정 추가하기
+        </button>
+      </div>
+    </div>
+
+    <div class="month-picker-backdrop" id="monthPicker">
+      <div class="month-picker-panel">
+        <div class="month-picker-header">
+          <span class="mp-title">월 선택</span>
+          <button class="mp-cancel" id="mpCancelBtn">취소</button>
+        </div>
+
+        <div class="mp-year-row">
+          <button class="mp-year-btn" id="mpYearPrev">&#10094;</button>
+          <span class="mp-year-label" id="mpYearLabel"></span>
+          <button class="mp-year-btn" id="mpYearNext">&#10095;</button>
+        </div>
+
+        <div class="mp-month-grid">
+          <button data-month="0">1월</button>
+          <button data-month="1">2월</button>
+          <button data-month="2">3월</button>
+          <button data-month="3">4월</button>
+          <button data-month="4">5월</button>
+          <button data-month="5">6월</button>
+          <button data-month="6">7월</button>
+          <button data-month="7">8월</button>
+          <button data-month="8">9월</button>
+          <button data-month="9">10월</button>
+          <button data-month="10">11월</button>
+          <button data-month="11">12월</button>
+        </div>
+
+        <div class="mp-footer">
+          <button class="mp-confirm" id="mpConfirmBtn">완료</button>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</section>
