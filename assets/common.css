@@ -258,7 +258,7 @@ section:last-of-type{padding-bottom: 9rem;}
 .chips li img{transition: filter 0.2s ease-in-out;}
 
 /* img */
-button.icon-heart-wish path{
+.icon-heart-wish path{
   fill: rgba(0,0,0,0.5);
   stroke: var(--white);
   transition: 0.2s ease-in-out;
@@ -275,7 +275,7 @@ button.icon-heart-wish path{
     height: inherit;
     object-fit: cover;
   }
-  button.icon-heart-wish{
+  .icon-heart-wish{
     position: absolute;
     right: 0.5rem;
     top: 0.5rem;
@@ -332,7 +332,6 @@ button.icon-heart-wish path{
       }
     }
   }
-  
 }
 .video-bottom{
   color: var(--white);
@@ -902,7 +901,7 @@ aside .aside-btn .btn.half{
 
 /* active가 붙었을 때 */
 /* icon-heart-wish */
-button.icon-heart-wish.active path{fill: var(--primary); stroke: var(--primary);}
+.icon-heart-wish.active path{fill: var(--primary); stroke: var(--primary);}
 
 /* chip */
 .chips li.active{

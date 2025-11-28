@@ -32,6 +32,7 @@ asideCloseBtn.addEventListener('click',()=>{
   body.classList.remove('aside-active');
 });
 
+
 /* 
 각자 필요한 내용 복붙으로 사용
 
@@ -70,5 +71,3 @@ document.querySelectorAll('.rating').forEach(rating => {
   rating.style.setProperty('--rateWidth', (rate / 5 * 100) + '%');
   score.textContent = rate;
 });
-
-*/
