@@ -29,8 +29,17 @@ h3.mycourse-title .mycourse-title-num{color: var(--primary);}
 }
 .mycourse-inner .mycourse-course{
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none; 
+  user-select: none;
+  cursor: grab;
+  column-gap: 2rem;
+  &::-webkit-scrollbar {display: none;}
+}
+.mycourse-course.is-grabbing {
+  cursor: grabbing;
 }
 .mycourse-course .mycourse-course-card{
   .store-box{
@@ -50,17 +59,31 @@ h3.mycourse-title .mycourse-title-num{color: var(--primary);}
   }
 }
 .mycourse-course .mycourse-course-arrow{
-  width: 2rem;
-  height: 2rem;
-  background-color: var(--primary);
-  border-radius: 50%;
+  font-size: 1.5rem;
+  color: var(--primary);
+}
+
+.makecourse-spot-plus{
+  width: 10rem;
+  height: 12.2rem;
+  border: 0.2rem dotted var(--secondary);
+  border-radius: 0.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  .fa-solid.fa-angle-up{
-    color: var(--white);
-    transform: rotate(90deg);
-    font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.makecourse-spot-plus-btn{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+  font-family: 'Paperozi';
+  color: var(--primary-text);
+  .fa-solid.fa-circle-plus{
+    color: var(--secondary);
   }
 }
 
