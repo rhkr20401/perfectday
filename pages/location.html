@@ -1,0 +1,139 @@
+  <section class="location-section">
+    <div class="inner">
+      <div class="location-map">
+        <img src="/assets/img/images/location.png" alt="지도" class="map-img">
+
+        <ul class="chips" id="chipsTab">
+          <li class="active" data-filter="all">
+            <span>전체</span>
+          </li>
+          <li data-filter="food">
+            <img
+              class="chip-icon"
+              src="/assets/img/svg/icon-food-gray.svg"
+              data-icon-gray="/assets/img/svg/icon-food-gray.svg"
+              data-icon-active="/assets/img/svg/icon-food-color.svg"
+              alt=""
+            >
+            <span>맛집</span>
+          </li>
+          <li data-filter="cafe">
+            <img
+              class="chip-icon"
+              src="/assets/img/svg/icon-cafe-gray.svg"
+              data-icon-gray="/assets/img/svg/icon-cafe-gray.svg"
+              data-icon-active="/assets/img/svg/icon-cafe-color.svg"
+              alt=""
+            >
+            <span>카페</span>
+          </li>
+          <li data-filter="play">
+            <img
+              class="chip-icon"
+              src="/assets/img/svg/icon-play-gray.svg"
+              data-icon-gray="/assets/img/svg/icon-play-gray.svg"
+              data-icon-active="/assets/img/svg/icon-play-color.svg"
+              alt=""
+            >
+            <span>놀거리+</span>
+          </li>
+        </ul>
+
+      <div
+        class="map-cate-icon food"
+        style="top: 48%; left: 13%;"
+        data-category="food"
+        data-name="핏제리아오"
+        data-desc="세계 피자 대회에서 1위한 경력이 있는 맛집"
+        data-address="서울 종로구 동숭길 86 2, 3층"
+        data-link="/detail-spot"
+      >
+        <img src="/assets/img/svg/icon-food-white.svg" alt="맛집" />
+        <span class="marker-label"></span>
+      </div>
+
+      <div
+        class="map-cate-icon food"
+        style="top: 59%; left: 60%;"
+        data-category="food"
+        data-name="불금 생선구이"
+        data-desc="든든한 한 끼가 필요한 날, 실속 있는 생선구이 정식."
+        data-address="서울 마포구 대학로 24"
+        data-link="/detail-spot"
+      >
+        <img src="/assets/img/svg/icon-food-white.svg" alt="맛집" />
+        <span class="marker-label"></span>
+      </div>
+
+      <div
+        class="map-cate-icon cafe"
+        style="top: 70%; left: 35%;"
+        data-category="cafe"
+        data-name="브렛서울"
+        data-desc="모던하고 고즈넉한 분위기, 브렛 라떼와 바스크 치즈케이크는 시그니처"
+        data-address="서울 광진구 광나루로 410 1층 101호"
+        data-link="/detail-sale-02"
+      >
+        <img src="/assets/img/svg/icon-cafe-white.svg" alt="카페" />
+        <span class="marker-label"></span>
+      </div>
+
+      <div
+        class="map-cate-icon cafe"
+        style="top: 20%; left: 70%;"
+        data-category="cafe"
+        data-name="궤도에 오르다"
+        data-desc=" 대학생들에게도 인기가 있는 가성비까지 챙긴 핫도그 맛집"
+        data-address="서울 광진구 광나루로 416 건회빌딩 1층 102호"
+        data-link="/detail-sale-01"
+      >
+        <img src="/assets/img/svg/icon-cafe-white.svg" alt="카페" />
+        <span class="marker-label"></span>
+      </div>
+
+      <div
+        class="map-cate-icon play"
+        style="top: 42%; left: 51%;"
+        data-category="play"
+        data-name="루프탑 라운지"
+        data-desc="야경이 예쁜 루프탑 라운지. 저녁 시간대 추천"
+        data-address="서울 마포구 루프탑길 10"
+        data-link="/detail-sale-03"
+      >
+        <img src="/assets/img/svg/icon-play-white.svg" alt="놀거리+" />
+        <span class="marker-label"></span>
+      </div>
+
+      <div
+        class="map-cate-icon play"
+        style="top: 65%; left: 88%;"
+        data-category="play"
+        data-name="반지만들기카페"
+        data-desc="기념일에도, 혼자 나만의 악세서리를 만들고 싶을 때 추천-!"
+        data-address="서울 광진구 동일로20길 89 성신빌딩 2층"
+        data-link="/detail-sale-03"
+      >
+        <img src="/assets/img/svg/icon-play-white.svg" alt="놀거리+" />
+        <span class="marker-label"></span>
+      </div>
+
+      <div class="place-card" id="placeCard">
+        <a href="#" class="place-card-link" id="placeCardLink">
+          <div class="place-tag" id="placeTag"></div>
+          <div class="place-title" id="placeTitle"></div>
+          <div class="place-desc" id="placeDesc"></div>
+          <div class="place-meta">
+            <span class="icon"><img src="/assets/img/svg/icon-map-gray.svg" alt=""></span>
+            <span id="placeAddress"></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="bottom-bar">
+        <button type="button">
+          <img src="/assets/img/svg/icon-restart.svg" alt=""><span>이 지역 재검색</span>
+        </button>
+      </div>
+      </div>
+    </div>
+  </section>
