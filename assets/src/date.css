@@ -1,4 +1,4 @@
-/* section{padding-top: 2.5rem;} */
+section{padding-top: 2.5rem;}
 .calendar-wrapper{
   .calendar-weekdays, .calendar-body{
     display: grid;
@@ -205,7 +205,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 9rem;
+  /* padding-bottom: 9rem; */
   z-index: 50;
   background: rgba(0,0,0,0);
   opacity: 0;
