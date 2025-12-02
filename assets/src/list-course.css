@@ -59,12 +59,15 @@ body{
 }
 
 .tabContents .main-box{
+  margin: auto;
+  padding: 0 2rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   .main-box2{
     position: relative;
+    margin: auto;
   }
 }
 .tabContents .main-box .coursemain{
@@ -85,7 +88,6 @@ body{
 
 .profile-box{
   display: flex;
-  justify-content: ;
   flex-direction: column;
   padding-top: 2rem;
 }
@@ -205,3 +207,6 @@ body{
 .tabContents > div.show{
   display: block;
 }
+
+/* footer */
+footer .inner{margin-top: 2rem;}

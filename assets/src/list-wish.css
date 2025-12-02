@@ -59,8 +59,10 @@ body{font-family: 'Pretendard';}
   align-items: center;
 }
 
+footer .inner{
+  margin-top: 1rem;
+}
+
 /* active가 붙었을 때 */
 /* icon-heart-wish */
 .icon-heart-wish.active path{fill: var(--primary); stroke: var(--primary);}
-
-

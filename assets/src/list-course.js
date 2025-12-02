@@ -34,8 +34,6 @@ $('.icon-heart-wish').on('click', function(e){
   $(this).attr('aria-pressed', isOn ? 'true' : 'false');
 });
 
-
-
 /* 비디오슬라이드 */
   function makeDragScroll(container) {
   let isDown = false;
@@ -82,5 +80,13 @@ document.querySelectorAll('.rating').forEach(rating => {
   score.textContent = rate;
   });
 
+  // jQuery
+  $(function(){
+  $('footer .company').on('click',function(){
+    $(this).toggleClass('active');
+    $(this).find('.company-info').stop().slideToggle(300);
+  });
+});
+
   }
-}
+};
