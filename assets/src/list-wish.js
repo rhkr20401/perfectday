@@ -1,7 +1,6 @@
 export default{
   init(root){
 
-document.addEventListener('DOMContentLoaded', function () {
   const tabs = document.querySelectorAll('.tab-menu li');
   const contents = document.querySelectorAll('.tabContents > div');
 
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
-});
 
 $('.icon-heart-wish').on('click', function(e){
   e.preventDefault();

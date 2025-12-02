@@ -1,7 +1,6 @@
 export default{
   init(root){
 
-document.addEventListener('DOMContentLoaded', function () {
   const tabs = document.querySelectorAll('.tab-menu li');
   const contents = document.querySelectorAll('.tabContents > div');
 
@@ -21,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
-});
 
 $('.icon-heart-wish').on('click', function(e){
   e.preventDefault();
@@ -82,10 +80,10 @@ document.querySelectorAll('.rating').forEach(rating => {
 
   // jQuery
   $(function(){
-  $('footer .company').on('click',function(){
-    $(this).toggleClass('active');
-    $(this).find('.company-info').stop().slideToggle(300);
-  });
+    $('footer .company').on('click',function(){
+      $(this).toggleClass('active');
+      $(this).find('.company-info').stop().slideToggle(300);
+    });
 });
 
   }

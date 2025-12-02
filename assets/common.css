@@ -92,6 +92,15 @@ input,button,select,textarea{
 p{word-break: keep-all;}
 h1{font-size: 100%;font: inherit;}
 button{cursor: pointer; color: var(--primary-text);}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
 
 
 
