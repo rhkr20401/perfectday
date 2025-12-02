@@ -13,7 +13,7 @@
           <div class="des-wrap">
             <div class="des"></div>
             <div class="counter">
-              <span class="now">1</span>
+              <span class="now" data-swiper-parallax-opacity="0.5" data-swiper-parallax-duration="600">1</span>
               <span class="all">| 5+</span>
             </div>
           </div>
@@ -21,11 +21,11 @@
         <div class="swiper-slide slide2">
           <div class="des-wrap">
             <div class="des">
-              <span>추워지는 날씨에 딱 맞는</span>
-              <p>전국 로맨틱 카페 BEST</p>
+              <span data-swiper-parallax-y="-100" data-swiper-parallax-duration="400">추워지는 날씨에 딱 맞는</span>
+              <p data-swiper-parallax-y="-100" data-swiper-parallax-duration="600">전국 로맨틱 카페 BEST</p>
             </div>
             <div class="counter">
-              <span class="now">2</span>
+              <span class="now" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="600">2</span>
               <span class="all">| 5+</span>
             </div>
           </div>
@@ -33,11 +33,11 @@
         <div class="swiper-slide slide3">
           <div class="des-wrap">
             <div class="des">
-              <span>실제로 다녀온 커플 후기 기반</span>
-              <p>찐 후기 데이트 BEST</p>
+              <span data-swiper-parallax-y="-100" data-swiper-parallax-duration="400">실제로 다녀온 커플 후기 기반</span>
+              <p data-swiper-parallax-y="-100" data-swiper-parallax-duration="600">찐 후기 데이트 BEST</p>
             </div>
             <div class="counter">
-              <span class="now">3</span>
+              <span class="now" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="600">3</span>
               <span class="all">| 5+</span>
             </div>
           </div>
@@ -45,11 +45,11 @@
         <div class="swiper-slide slide4">
           <div class="des-wrap">
             <div class="des">
-              <span>사진 맛집 + 무드 좋은 루트만 쏙쏙</span>
-              <p>인생샷 맛집 코스 BEST</p>
+              <span data-swiper-parallax-y="-100" data-swiper-parallax-duration="400">사진 맛집 + 무드 좋은 루트만 쏙쏙</span>
+              <p data-swiper-parallax-y="-100" data-swiper-parallax-duration="600">인생샷 맛집 코스 BEST</p>
             </div>
             <div class="counter">
-              <span class="now">4</span>
+              <span class="now" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="600">4</span>
               <span class="all">| 5+</span>
             </div>
           </div>
@@ -57,11 +57,11 @@
         <div class="swiper-slide slide5">
           <div class="des-wrap">
             <div class="des">
-              <span>조용히 힐링할 수 있는 데이트</span>
-              <p>둘이서만 아늑함 BEST</p>
+              <span data-swiper-parallax-y="-100" data-swiper-parallax-duration="400">조용히 힐링할 수 있는 데이트</span>
+              <p data-swiper-parallax-y="-100" data-swiper-parallax-duration="600">둘이서만 아늑함 BEST</p>
             </div>
             <div class="counter">
-              <span class="now">5</span>
+              <span class="now" data-swiper-parallax-opacity="0" data-swiper-parallax-duration="600">5</span>
               <span class="all">| 5+</span>
             </div>
           </div>
@@ -82,19 +82,19 @@
         </a>
       </li>
       <li>
-        <a data-link href="/list-spot">
+        <a data-link href="/list-spot?category=food">
           <img src="/assets/img/svg/icon-food-color-secondary.svg" alt="맛집 아이콘">
           <p class="home-nav-title">맛집</p>
         </a>
       </li>
       <li>
-        <a data-link href="/list-spot">
+        <a data-link href="/list-spot?category=cafe">
           <img src="/assets/img/svg/icon-cafe-color-secondary.svg" alt="카페 아이콘">
           <p class="home-nav-title">카페</p>
         </a>
       </li>
       <li>
-        <a data-link href="/list-spot">
+        <a data-link href="/list-spot?category=play">
           <img src="/assets/img/svg/icon-play-color-secondary.svg" alt="놀거리+ 아이콘">
           <p class="home-nav-title">놀거리</p>
         </a>
@@ -120,7 +120,7 @@
       <a data-link href="/list-course"><p class="section-title-sub more">전체보기 <i class="fa-solid fa-angle-right"></i></p></a>
     </div>
     <ul class="video-list">
-      <li>
+      <li class="select">
         <div class="video-thumb thumb">
           <video src="/assets/img/video/video01.mp4" autoplay muted playsinline loop></video>
           <div class="video-inner">
@@ -685,8 +685,43 @@
   <div class="book-btn-wrap">
     <div class="inner">
       <div class="half-btn-wrap">
-        <a href="#" class="btn half book-close2">취소</a>
-        <a href="#" class="btn half primary">예약하기</a>
+        <a href="#none" class="btn half book-close2">취소</a>
+        <a href="#none" class="btn half primary">예약하기</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 동영상 모달 -->
+<div class="video-modal">
+  <div class="video-thumb thumb modal">
+    <video src="/assets/img/video/video01.mp4" autoplay muted playsinline loop></video>
+    <div class="video-inner">
+      <div class="video-btn-top">
+        <button class="video-close">
+          <svg width="25" height="25" viewBox="0 0 25 25"><path d="M7.18494 22.5218L21.5193 8.18745"/><path d="M21.5217 22.5218L7.18739 8.18745"/></svg>
+        </button>
+        <div class="video-top">
+          <div class="video-profile">
+            <img src="/assets/img/images/profile-M.png" alt="profile-M">
+            <span class="name">공식남</span>
+          </div>
+          <div class="icon-heart-wish">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M10.3682 3.65625C12.4926 1.34806 14.7617 1.11218 16.4717 1.92969C18.22 2.76564 19.5 4.75317 19.5 7.12012C19.5 11.9163 15.737 14.4664 12.7197 16.9512V16.9521C12.1963 17.3845 11.7135 17.7766 11.2441 18.0635C10.7739 18.3508 10.3674 18.5 10 18.5C9.63273 18.5 9.22622 18.3509 8.75586 18.0635C8.28637 17.7766 7.80388 17.3846 7.28027 16.9531C4.26373 14.4659 0.50007 11.9164 0.5 7.11914C0.5 4.75165 1.78005 2.76427 3.52832 1.92871C5.23828 1.11162 7.50736 1.34804 9.63184 3.65625L10 4.05566L10.3682 3.65625Z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="video-bottom">
+        <div class="vidio-title">
+          <p>여친 몰래 준비한 성공확률 1,000% 데이트코스</p>
+          <div class="video-more">
+            <span></span> <span></span> <span></span>
+          </div>
+        </div>
+        <p class="video-play">1,010</p>
+        <a data-link href="/detail-course" class="btn stroke course-btn">코스 상세보기 <i class="fa-solid fa-chevron-right"></i></a>
       </div>
     </div>
   </div>

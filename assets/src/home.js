@@ -46,6 +46,8 @@ export default{
         disableOnInteraction: false,
       },
       loop:true,
+      allowTouchMove: true,
+      parallax: true
     });
 
     // x-drag
@@ -87,45 +89,60 @@ export default{
     const modal = document.querySelector('.book-modal');
     const overlay = document.querySelector('.book-overlay');
     const bookCloseBtn = document.querySelector('.book-close');
-    const bookCloseBtn2 = document.querySelector('.book-btn-wrap .book-close2');
+    const cancelBtn = document.querySelector('.book-close2');
+    const bookSubmitBtn = document.querySelector('.book-btn-wrap .primary');
 
-    let scrollY = 0;
+    let picker = null;
+    const today = new Date();
 
     function openBookModal() {
+      modal.style.display = 'block';
+      modal.getBoundingClientRect();
       body.classList.add('book-active');
-      modal.scrollTop = 0;
+      modal.style.transform = 'translateY(0)';
+      modal.style.opacity = '1';
+
+      if (!picker) {
+        picker = new Litepicker({
+          element: document.getElementById('calendar'),
+          inlineMode: true,
+          singleMode: true,
+          firstDay: 0,
+          lang: 'ko',
+          format: 'YYYY-MM-DD',
+          numberOfMonths: 1,
+          numberOfColumns: 1,
+          startDate: today,
+        });
+      }
     }
+
     function closeBookModal() {
+      modal.style.transform = 'translateY(100%)';
+      modal.style.opacity = '0';
       body.classList.remove('book-active');
+
+      modal.addEventListener('transitionend', () => {
+        if (!body.classList.contains('book-active')) {
+          modal.style.display = 'none';
+        }
+      }, { once: true });
     }
-    modal.addEventListener('click', (e) => {
-      e.stopPropagation();
-    });
+
     gotoBook.addEventListener('click',(e)=>{
       e.preventDefault();
       e.stopPropagation();
       openBookModal();
     });
+
     overlay.addEventListener('click', closeBookModal);
     bookCloseBtn.addEventListener('click', closeBookModal);
-    bookCloseBtn2.addEventListener('click', closeBookModal);
+    cancelBtn.addEventListener('click', closeBookModal);
+    bookSubmitBtn.addEventListener('click', closeBookModal);
 
-    // 캘린더
-    const calendarEl = document.getElementById('calendar');
-    const today = new Date();
-    if (calendarEl) {
-      new Litepicker({
-        element: calendarEl,
-        inlineMode: true,
-        singleMode: true,
-        firstDay: 0,
-        lang: 'ko',
-        format: 'YYYY-MM-DD',
-        numberOfMonths: 1,
-        numberOfColumns: 1,
-        startDate: today,
-      });
-    }
+    modal.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
 
     //qty
     const qtys = document.querySelectorAll('.qty');
@@ -155,6 +172,25 @@ export default{
       $(".book-sale-item").on('click',function(){
         $(this).toggleClass('active');
       });
+    });
+
+    // 비디오 모달 열기/닫기
+    const videoSelect = document.querySelector('.video-list li.select');
+    const videoCloseBtn = document.querySelector('.video-close');
+    if (videoSelect) {
+      videoSelect.addEventListener('click', () => {
+        document.body.classList.add('video-active');
+      });
+    }
+    if (videoCloseBtn) {
+      videoCloseBtn.addEventListener('click', () => {
+        document.body.classList.remove('video-active');
+      });
+    }
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.course-btn')) {
+        document.body.classList.remove('video-active');
+      }
     });
   }
 }

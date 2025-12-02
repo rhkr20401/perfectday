@@ -91,7 +91,7 @@ input,button,select,textarea{
 }
 p{word-break: keep-all;}
 h1{font-size: 100%;font: inherit;}
-button{cursor: pointer;}
+button{cursor: pointer; color: var(--primary-text);}
 
 
 
@@ -141,7 +141,7 @@ button{cursor: pointer;}
 
 /* section공통 */
 .app{
-  margin-top: 5.5rem;
+  padding-top: 5.5rem;
 }
 section{width: 100%;}
 section:last-of-type{padding-bottom: 7.5rem;}
@@ -666,7 +666,6 @@ section:last-of-type{padding-bottom: 7.5rem;}
   align-items: center;
   column-gap: 0.2rem;
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
   color: var(--secondary-text);
 }
 .makecourse-txt .book-chip{
@@ -931,9 +930,4 @@ aside .aside-btn .btn.half:hover{
   background-color: var(--primary);
   color: #fff;
 }
-.book-modal{
-  transition: none !important;
-}
-body.book-ready .book-modal{
-  transition: transform 0.3s ease-in-out;
-}
+

@@ -70,6 +70,7 @@ export default{
         disableOnInteraction: false,
       },
       loop:true,
+      allowTouchMove: true,
     });
 
     function makeDragScroll(container) {
@@ -106,75 +107,90 @@ export default{
     document.querySelectorAll('.menu-img').forEach(makeDragScroll);
 
     //예약 모달
-    const gotoBook = document.querySelector('#gotoBook');
-    const body = document.querySelector('body');
-    const modal = document.querySelector('.book-modal');
-    const overlay = document.querySelector('.book-overlay');
-    const bookCloseBtn = document.querySelector('.book-close');
-    const bookCloseBtn2 = document.querySelector('.book-btn-wrap .book-close2');
+    // const gotoBook = document.querySelector('#gotoBook');
+    // const body = document.querySelector('body');
+    // const modal = document.querySelector('.book-modal');
+    // const overlay = document.querySelector('.book-overlay');
+    // const bookCloseBtn = document.querySelector('.book-close');
+    // const cancelBtn = document.querySelector('.book-close2');
+    // const bookSubmitBtn = document.querySelector('.book-btn-wrap .primary');
 
-    let scrollY = 0;
+    // let picker = null;
+    // const today = new Date();
 
-    function openBookModal() {
-      body.classList.add('book-active');
-      modal.scrollTop = 0;
-    }
-    function closeBookModal() {
-      body.classList.remove('book-active');
-    }
-    modal.addEventListener('click', (e) => {
-      e.stopPropagation();
-    });
-    gotoBook.addEventListener('click',(e)=>{
-      e.preventDefault();
-      e.stopPropagation();
-      openBookModal();
-    });
-    overlay.addEventListener('click', closeBookModal);
-    bookCloseBtn.addEventListener('click', closeBookModal);
-    bookCloseBtn2.addEventListener('click', closeBookModal);
+    // function openBookModal() {
+    //   modal.style.display = 'block';
+    //   modal.getBoundingClientRect();
+    //   body.classList.add('book-active');
+    //   modal.style.transform = 'translateY(0)';
+    //   modal.style.opacity = '1';
 
-    // 캘린더
-    const calendarEl = document.getElementById('calendar');
-    const today = new Date();
-    if (calendarEl) {
-      new Litepicker({
-        element: calendarEl,
-        inlineMode: true,
-        singleMode: true,
-        firstDay: 0,
-        lang: 'ko',
-        format: 'YYYY-MM-DD',
-        numberOfMonths: 1,
-        numberOfColumns: 1,
-        startDate: today,
-      });
-    }
+    //   if (!picker) {
+    //     picker = new Litepicker({
+    //       element: document.getElementById('calendar'),
+    //       inlineMode: true,
+    //       singleMode: true,
+    //       firstDay: 0,
+    //       lang: 'ko',
+    //       format: 'YYYY-MM-DD',
+    //       numberOfMonths: 1,
+    //       numberOfColumns: 1,
+    //       startDate: today,
+    //     });
+    //   }
+    // }
 
-    //qty
-    const qtys = document.querySelectorAll('.qty');
-    qtys.forEach((qty)=>{
-      const minusBtn = qty.querySelector('.minus');
-      const plusBtn = qty.querySelector('.plus');
-      const input = qty.querySelector('input');
+    // function closeBookModal() {
+    //   modal.style.transform = 'translateY(100%)';
+    //   modal.style.opacity = '0';
+    //   body.classList.remove('book-active');
 
-      minusBtn.addEventListener('click',()=>{
-        if(input.value>1){
-          input.value = parseInt(input.value) - 1;
-        }
-      });
-      plusBtn.addEventListener('click',()=>{
-        input.value = parseInt(input.value) + 1;
-      });
-    });
+    //   modal.addEventListener('transitionend', () => {
+    //     if (!body.classList.contains('book-active')) {
+    //       modal.style.display = 'none';
+    //     }
+    //   }, { once: true });
+    // }
+
+    // gotoBook.addEventListener('click',(e)=>{
+    //   e.preventDefault();
+    //   e.stopPropagation();
+    //   openBookModal();
+    // });
+
+    // overlay.addEventListener('click', closeBookModal);
+    // bookCloseBtn.addEventListener('click', closeBookModal);
+    // cancelBtn.addEventListener('click', closeBookModal);
+    // bookSubmitBtn.addEventListener('click', closeBookModal);
+
+    // modal.addEventListener('click', (e) => {
+    //   e.stopPropagation();
+    // });
+
+    // //qty
+    // const qtys = document.querySelectorAll('.qty');
+    // qtys.forEach((qty)=>{
+    //   const minusBtn = qty.querySelector('.minus');
+    //   const plusBtn = qty.querySelector('.plus');
+    //   const input = qty.querySelector('input');
+
+    //   minusBtn.addEventListener('click',()=>{
+    //     if(input.value>1){
+    //       input.value = parseInt(input.value) - 1;
+    //     }
+    //   });
+    //   plusBtn.addEventListener('click',()=>{
+    //     input.value = parseInt(input.value) + 1;
+    //   });
+    // });
 
     //예약모달 jquery
     $(function(){
-      $('.time').on('click',function(){
-        if ($(this).hasClass('select')) return;
-        $('.time').removeClass('active');
-        $(this).addClass('active');
-      });
+      // $('.time').on('click',function(){
+      //   if ($(this).hasClass('select')) return;
+      //   $('.time').removeClass('active');
+      //   $(this).addClass('active');
+      // });
 
       $(".book-sale-item").on('click',function(){
         $(this).toggleClass('active');
