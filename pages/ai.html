@@ -1,13 +1,186 @@
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-  test one
+<section>
+  <div class="inner">
+    <form action="#">
+      <div role="tab-list">
+        <div role="tabpanel" class="tabpanel">
+          <div class="ai-wrap">
+            <h3 class="ai-title">AI 추천 코스</h3>
+            <p class="subtitle">추천 받고 싶은 지역을 선택해주세요</p>
 
-</body>
-</html>
+            <div class="ai-address-row">
+              <div class="ai-address-input-wrap">
+                <input
+                  type="text"
+                  id="addressInput"
+                  class="ai-address-input"
+                  readonly
+                />
+              </div>
+              <button type="button" class="ai-address-button" id="btnAddressSearch">
+                주소 검색
+              </button>
+            </div>
+
+            <p class="ai-label">최대 3개 선택 가능</p>
+            <div class="ai-region-grid">
+              <button class="ai-region-btn" type="button">서울</button>
+              <button class="ai-region-btn" type="button">부산</button>
+              <button class="ai-region-btn" type="button">대구</button>
+              <button class="ai-region-btn" type="button">인천</button>
+              <button class="ai-region-btn" type="button">광주</button>
+              <button class="ai-region-btn" type="button">대전</button>
+              <button class="ai-region-btn" type="button">울산</button>
+              <button class="ai-region-btn" type="button">세종</button>
+              <button class="ai-region-btn" type="button">경기</button>
+              <button class="ai-region-btn" type="button">강원</button>
+              <button class="ai-region-btn" type="button">충북</button>
+              <button class="ai-region-btn" type="button">충남</button>
+              <button class="ai-region-btn" type="button">전북</button>
+              <button class="ai-region-btn" type="button">전남</button>
+              <button class="ai-region-btn" type="button">경북</button>
+              <button class="ai-region-btn" type="button">경남</button>
+              <button class="ai-region-btn" type="button">제주</button>
+            </div>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tabpanel hidden">
+          <div class="course-wrap">
+            <h3 class="course-title">AI 추천 코스</h3>
+            <p class="subtitle">
+              코스의 장소 개수와 종류를 선택해주세요 (최대 5개)
+            </p>
+            <div class="type">종류</div>
+
+            <div class="course-list-wrap">
+              <div class="course-list">
+                <div class="course-item">
+                  <span class="badge">1</span>
+                  <div class="type-buttons">
+                    <button class="type-btn" type="button">맛집</button>
+                    <button class="type-btn" type="button">카페</button>
+                    <button class="type-btn" type="button">놀거리+</button>
+                  </div>
+                  <button class="course-remove" type="button">×</button>
+                </div>
+                <div class="course-item">
+                  <span class="badge">2</span>
+                  <div class="type-buttons">
+                    <button class="type-btn" type="button">맛집</button>
+                    <button class="type-btn" type="button">카페</button>
+                    <button class="type-btn" type="button">놀거리+</button>
+                  </div>
+                  <button class="course-remove" type="button">×</button>
+                </div>
+              </div>
+            </div>
+            <button class="btn-add" type="button">+ 코스 추가</button>
+          </div>
+        </div>
+
+        <div role="tabpanel" class="tabpanel hidden">
+          <div class="slider-wrap">
+            <h3 class="slide-title">AI 추천 코스</h3>
+            <p class="subtitle">
+              원하시는 거리와 가격을 선택해주세요
+            </p>
+            <div class="time-range range-box">
+              <h4 class="range-title">이동 시간 범위 (도보 기준)</h4>
+              <div class="slider-wrapper">
+                <div class="slider-track" id="track-time">
+                  <div class="slider-range" id="range-time"></div>
+                  <div class="slider-thumb slider-thumb--min" id="thumb-time-min">
+                    <span class="slider-thumb-inner"></span>
+                  </div>
+                  <div class="slider-thumb slider-thumb--max" id="thumb-time-max">
+                    <span class="slider-thumb-inner"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-group">
+                  <label>최소 (분)</label>
+                  <input
+                    type="number"
+                    id="input-time-min"
+                    min="0"
+                    max="60"
+                    step="5"
+                    value="0"
+                  >
+                </div>
+                <div class="input-group">
+                  <label>최대 (분)</label>
+                  <input
+                    type="number"
+                    id="input-time-max"
+                    min="0"
+                    max="60"
+                    step="5"
+                    value="60"
+                  >
+                </div>
+              </div>
+              <p class="help-text">최대 60분은 “1시간 이상”으로 표시됩니다.</p>
+            </div>
+
+            <div class="line-thin"></div>
+
+            <div class="price-range range-box">
+              <h4 class="range-title">가격 범위</h4>
+
+              <div class="slider-wrapper">
+                <div class="slider-track" id="track-price">
+                  <div class="slider-range" id="range-price"></div>
+                  <div class="slider-thumb slider-thumb--min" id="thumb-price-min">
+                    <span class="slider-thumb-inner"></span>
+                  </div>
+                  <div class="slider-thumb slider-thumb--max" id="thumb-price-max">
+                    <span class="slider-thumb-inner"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="input-row">
+                <div class="input-group">
+                  <label>최소 (원)</label>
+                  <input
+                    type="number"
+                    id="input-price-min"
+                    min="0"
+                    max="100000"
+                    step="5000"
+                    value="0"
+                  >
+                </div>
+                <div class="input-group">
+                  <label>최대 (원)</label>
+                  <input
+                    type="number"
+                    id="input-price-max"
+                    min="0"
+                    max="100000"
+                    step="5000"
+                    value="100000"
+                  >
+                </div>
+              </div>
+              <p class="help-text">최대 10만원은 “10만원 이상”으로 표시됩니다.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-bar">
+        <div class="tab-status">
+          <span class="tab active"></span>
+          <span class="tab"></span>
+          <span class="tab"></span>
+        </div>
+        <div class="pagination">
+          <button type="button" class="btn btn-prev hidden" id="prev">이전</button>
+          <button type="button" class="btn" id="next">다음</button>
+          <a data-link href="/list-course" class="btn btn-submit hidden" id="submit">코스 추천받기</a>
+        </div>
+      </div>
+    </form>
+  </div>
+</section>
