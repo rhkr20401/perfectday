@@ -72,7 +72,7 @@ function initStep1(panel){
   const addCourseBtn = panel.querySelector(".btn-add");
   let courseCount = panel.querySelectorAll(".course-item").length;
   const MIN_COURSE = 2;
-  const MAX_COURSE = 5;
+  const MAX_COURSE = 4;
 
   function setupTypeButtons(courseItem) {
     const buttons = courseItem.querySelectorAll(".type-btn");
