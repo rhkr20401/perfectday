@@ -179,8 +179,7 @@
   display: flex;
   flex-direction: column;
   row-gap: 1rem;
-  &:not(:first-of-type){padding-top: 1rem;}
-  &:not(:last-of-type){padding-bottom: 1rem; border-bottom: 0.1rem solid var(--gray200);}
+  &:not(:last-of-type){padding-bottom: 1.5rem; border-bottom: 0.1rem solid var(--gray200);}
   .info-title{
     display: flex;
     align-items: center;
@@ -269,7 +268,8 @@
         b{
           font-weight: 600;
           display: inline-block;
-          width: 3.5rem;
+          width: fit-content;
+          padding-right: 0.5rem;
           border-right: 0.1rem solid var(--gray200);
         }
         span{
@@ -616,7 +616,7 @@ body.book-active .book-modal {
 .check-detail{
   padding: 1rem 0 1rem 0;
   li{
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 0;
     display: flex;
     justify-content: space-between;
     border-bottom: 0.1rem solid var(--gray200);

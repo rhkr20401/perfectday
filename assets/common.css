@@ -101,7 +101,7 @@ select {
   -webkit-appearance: none;
   appearance: none;
 }
-
+h1{margin: 0;}
 
 
 /* common______________________________ */
@@ -426,7 +426,6 @@ section:last-of-type{padding-bottom: 7.5rem;}
 /* rating-star */
 .star-rate{
   display: flex;
-  align-items: center;
   column-gap: 0.2rem;
 }
 .rating{
