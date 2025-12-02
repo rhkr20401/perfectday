@@ -1,4 +1,4 @@
-/* section{padding-top: 2.5rem;} */
+section{padding-top: 2.5rem;}
 .calendar-wrapper{
   .calendar-weekdays, .calendar-body{
     display: grid;
@@ -84,7 +84,7 @@
   justify-content: center;
   align-items: center;
 }
-.date-cell.event-range:before {
+.date-cell.event-range:before{
   content: "";
   position: absolute;
   top: 50%;
@@ -109,9 +109,7 @@
   margin-bottom: 1rem;
   font-size: 1.7rem;
 }
-.event-text.empty-text{
-  font-size: 1.4rem;
-}
+.event-text.empty-text{font-size: 1.4rem;}
 
 .selected-date-text .selected-weekday{
   display: inline;
@@ -124,23 +122,19 @@
   margin-bottom: 2rem;
   font-size: 1.1rem;
 }
-
 .course-list{
   display: flex;
   flex-direction: column;
 }
-
 .course-list .course-item{
   display: flex;
   align-items: center;
 }
-
 .course-left {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .course-step{
   width: 2.2rem;
   height: 2.2rem;
@@ -155,25 +149,21 @@
 .course-step.step-1{background-color: var(--primary);}
 .course-step.step-2{background-color: var(--cafeicon);}
 .course-step.step-3{background-color: var(--playicon);}
-
 .course-time{
   font-size: 1.5rem;
   font-weight: 500;
   color: var(--secondary-text);
 }
-
 .course-right {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
   margin-left: 1rem;
 }
-
 .course-place{
   font-weight: 400;
   font-size: 1.7rem;
 }
-
 .course-location{
   display: flex;
   align-items: flex-start;
@@ -182,7 +172,6 @@
   position: relative;
   padding-left: 1.7rem;
 }
-
 .course-location:before{
   content: "";
   position: absolute;
@@ -193,7 +182,6 @@
   background-size: contain;
   background-repeat: no-repeat
 }
-
 .add-event-btn{
   width: 100%;
   margin-bottom: 3rem;
@@ -207,7 +195,6 @@
   border: 0.2rem solid var(--secondary);
   cursor: pointer;
 }
-
 .month-picker-backdrop{
   position: fixed;
   left: 0;
@@ -218,7 +205,7 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  padding-bottom: 9rem;
+  /* padding-bottom: 9rem; */
   z-index: 50;
   background: rgba(0,0,0,0);
   opacity: 0;
@@ -230,7 +217,6 @@
   background: rgba(0,0,0,0.55);
   pointer-events: auto;
 }
-
 .month-picker-panel{
   width: 100%;
   background: var(--white);
@@ -241,11 +227,9 @@
   transform: translateY(100%);
   transition: transform .35s ease;
 }
-
 .month-picker-backdrop.open .month-picker-panel{
   transform: translateY(0);
 }
-
 .month-picker-header{
   display: flex;
   justify-content: space-between;
@@ -284,7 +268,6 @@
   font-size: 1.6rem;
   font-weight: 600;
 }
-
 .mp-month-grid{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -304,7 +287,6 @@
   color: var(--white);
   border-color: var(--primary);
 }
-
 .mp-footer{
   display: flex;
   justify-content: flex-end;
