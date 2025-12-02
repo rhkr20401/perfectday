@@ -20,4 +20,15 @@
   margin-bottom: 2rem;
 }
 section.first-section{padding-top: 2.5rem;}
-.chips{margin-bottom: 1rem;}
+.chips {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  user-select: none;
+  scrollbar-width: none;
+  margin-bottom:1rem ;
+  padding-bottom: 0.2rem;
+}
+.chips li {
+  flex-shrink: 0;
+}
