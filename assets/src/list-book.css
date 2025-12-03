@@ -14,6 +14,7 @@
   border: 1px solid var(--gray100);
   padding: 1.2rem 1rem;
   border-radius: 1rem;
+  margin-bottom: 2rem;
 }
 .book:first-of-type{margin-bottom: 2rem;}
 
