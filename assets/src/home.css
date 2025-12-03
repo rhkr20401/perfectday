@@ -638,7 +638,7 @@ body.video-active .video-modal{display: block;}
 #dontShowCheckbox{display: none;}
 #dontShowCheckbox + label {
   position: relative;
-  padding-left: 3rem;
+  padding-left: 2.5rem;
   cursor: pointer;
   user-select: none;
   color: #fff;
