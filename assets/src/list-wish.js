@@ -1,92 +1,61 @@
-export default{
-  init(root){
+export default {
+  init(root) {
 
-  const tabs = document.querySelectorAll('.tab-menu li');
-  const contents = document.querySelectorAll('.tabContents > div');
+    const tabs = root.querySelectorAll('.tab-menu li');
+    const contents = root.querySelectorAll('.tabContents > div');
 
-  tabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      const targetId = tab.dataset.alt;
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const targetId = tab.dataset.alt; // "tab1" | "tab2"
 
-      tabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
+        tabs.forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
 
-      contents.forEach(c => {
-        if (c.id === targetId) {
-          c.classList.add('show');
-        } else {
-          c.classList.remove('show');
-        }
+        contents.forEach(c => c.classList.toggle('show', c.id === targetId));
       });
     });
-  });
 
-$('.icon-heart-wish').on('click', function(e){
-  e.preventDefault();
-  e.stopPropagation();
+    root.querySelectorAll('.icon-heart-wish')?.forEach(btn => {
+      btn.addEventListener('click', e => {
+        e.preventDefault();
+        e.stopPropagation();
+        btn.classList.toggle('active');
+        btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+      });
+    });
 
-  $(this).toggleClass('active');
+    root.querySelectorAll('.rating')?.forEach(rating => {
+      const rate = parseFloat(rating.dataset.rate || '0');
+      const score = rating.parentElement.querySelector('.score');
+      rating.style.setProperty('--rateWidth', (rate / 5 * 100) + '%');
+      if (score) score.textContent = rate.toFixed(1);
+    });
 
-  // aria-pressed 토글
-  const isOn = $(this).hasClass('active');
-  $(this).attr('aria-pressed', isOn ? 'true' : 'false');
-});
-
-
-
-/* 비디오슬라이드 */
-  function makeDragScroll(container) {
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
-  container.addEventListener('mousedown', (e) => {
-    isDown = true;
-    container.style.cursor = 'grabbing';
-    startX = e.pageX - container.offsetLeft;
-    scrollLeft = container.scrollLeft;
-  });
-
-  container.addEventListener('mouseleave', () => {
-    isDown = false;
-    container.style.cursor = 'grab';
-  });
-
-  container.addEventListener('mouseup', () => {
-    isDown = false;
-    container.style.cursor = 'grab';
-  });
-
-  container.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - container.offsetLeft;
-    const walk = x - startX;
-    container.scrollLeft = scrollLeft - walk;
-  });
-}
-
-  document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.video_box').forEach(makeDragScroll);
-});
-
-//javascript
-//star-rate
-document.querySelectorAll('.rating').forEach(rating => {
-  const rate = rating.dataset.rate;
-  const score = rating.parentElement.querySelector('.score');
-
-  rating.style.setProperty('--rateWidth', (rate / 5 * 100) + '%');
-  score.textContent = rate;
-  });
-
-// jQuery
-  $(function(){
-  $('footer .company').on('click',function(){
-    $(this).toggleClass('active');
-    $(this).find('.company-info').stop().slideToggle(300);
-  });
-});
-
+    const company = root.closest('body')?.querySelector('footer .company');
+    if (company) {
+      company.addEventListener('click', () => {
+        company.classList.toggle('active');
+        const info = company.querySelector('.company-info');
+        if (info) info.style.display = (info.style.display === 'block' ? 'none' : 'block');
+      });
+    }
+    // 비디오 모달 열기/닫기
+    const videoSelect = document.querySelector('.vedio-box li.select');
+    const videoCloseBtn = document.querySelector('.video-close');
+    if (videoSelect) {
+      videoSelect.addEventListener('click', () => {
+        document.body.classList.add('video-active');
+      });
+    }
+    if (videoCloseBtn) {
+      videoCloseBtn.addEventListener('click', () => {
+        document.body.classList.remove('video-active');
+      });
+    }
+    document.addEventListener('click', (e) => {
+      if (e.target.closest('.course-btn')) {
+        document.body.classList.remove('video-active');
+      }
+    });
   }
 };

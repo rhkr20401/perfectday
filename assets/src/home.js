@@ -192,5 +192,26 @@ export default{
         document.body.classList.remove('video-active');
       }
     });
+    
+    $(function(){
+      // localStorage 체크
+      if (localStorage.getItem("dontShowPopup") === "true") {
+        $(".pop-up-modal").hide();
+        return;
+      }
+
+      // 기본 팝업 표시
+      $(".pop-up-modal").fadeIn();
+
+      // 닫기 버튼
+      $(".close-modal").on("click", function (){
+        $(".pop-up-modal").fadeOut();
+
+        if ($("#dontShowCheckbox").is(":checked")) {
+          localStorage.setItem("dontShowPopup", "true");
+        }
+      });
+    });
+
   }
 }

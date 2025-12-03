@@ -38,7 +38,6 @@
 /* list main */
 .tabContents h2{
   font-family: 'Paperozi';
-  text-align: center;
   font-size: 1.8rem;
   font-weight: 500;
   padding-top: 2rem;
@@ -47,11 +46,8 @@
 }
 
 .tabContents .main-box{
+  width: 100%;
   margin: auto;
-  padding: 0 2rem;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
   .main-box2{
     position: relative;
@@ -63,7 +59,7 @@
   background-position: center;
   background-repeat: no-repeat;
   object-fit: cover;
-  width: 35rem;
+  width: 100%;
   height: 15rem;
   border-radius: 1rem;
 }
@@ -116,9 +112,10 @@
 
 /* list */
 .list-king{
+  width: 100%;
   margin-top: 2rem;
   display: flex;
-  justify-content: center;
+  gap: 2rem;
 }
 
 .list-king2{
@@ -129,6 +126,7 @@
 
 
 .listbox{
+
   background-color: var(--white);
   width: 100%;
   height: auto;
