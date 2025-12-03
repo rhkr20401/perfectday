@@ -40,11 +40,13 @@ export default {
       });
     }
     // 비디오 모달 열기/닫기
-    const videoSelect = document.querySelector('.vedio-box li.select');
+    const videoItems = document.querySelectorAll('.vedio-box li');
     const videoCloseBtn = document.querySelector('.video-close');
-    if (videoSelect) {
-      videoSelect.addEventListener('click', () => {
-        document.body.classList.add('video-active');
+    if (videoItems.length > 0) {
+      videoItems.forEach(item => {
+        item.addEventListener('click', () => {
+          document.body.classList.add('video-active');
+        });
       });
     }
     if (videoCloseBtn) {

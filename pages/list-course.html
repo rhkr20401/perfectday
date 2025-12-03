@@ -8,8 +8,8 @@
       <img src="../assets/img/svg/icon-vedio.svg" alt="videoicon">
       <h2 class="section-title">이달의 인기코스</h2>
     </div>
-    <div class="video_box">
-      <a data-link href="/detail-course">
+    <ul class="video_box">
+      <li>
         <div class="video-thumb thumb">
             <video src="../assets/img/video/video01.mp4" autoplay muted playsinline loop></video>
             <div class="video-inner">
@@ -34,8 +34,9 @@
                 <p class="video-play">1,010</p>
               </div>
             </div>
-          </div>
-      </a>
+        </div>
+      </li>
+      <li>
         <div class="video-thumb thumb">
           <video src="../assets/img/video/video02.mp4" autoplay muted playsinline loop></video>
           <div class="video-inner">
@@ -61,6 +62,8 @@
             </div>
           </div>
         </div>
+      </li>
+      <li>
         <div class="video-thumb thumb">
           <video src="../assets/img/video/video03.mp4" autoplay muted playsinline loop></video>
           <div class="video-inner">
@@ -86,6 +89,8 @@
             </div>
           </div>
         </div>
+      </li>
+      <li>
         <div class="video-thumb thumb">
           <video src="../assets/img/video/video04.mp4" autoplay muted playsinline loop></video>
           <div class="video-inner">
@@ -111,7 +116,8 @@
             </div>
           </div>
         </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -127,27 +133,25 @@
     <!-- 탭메뉴별 컨텐츠 -->
     <div class="tabContents">
       <div id="tab1" class="show" data-order="tab1">
-        <a data-link href="/detail-course">
-          <h2>여친 몰래 준비한 성공 확률 1000% 데이트코스</h2>
-          <div class="main-box">
-            <div class="main-box2">
-                  <img class="coursemain" src="../assets/img/images/course01.png" alt="course01">
-                <div class="icon-heart-wish">
-                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.3682 3.65625C12.4926 1.34806 14.7617 1.11218 16.4717 1.92969C18.22 2.76564 19.5 4.75317 19.5 7.12012C19.5 11.9163 15.737 14.4664 12.7197 16.9512V16.9521C12.1963 17.3845 11.7135 17.7766 11.2441 18.0635C10.7739 18.3508 10.3674 18.5 10 18.5C9.63273 18.5 9.22622 18.3509 8.75586 18.0635C8.28637 17.7766 7.80388 17.3846 7.28027 16.9531C4.26373 14.4659 0.50007 11.9164 0.5 7.11914C0.5 4.75165 1.78005 2.76427 3.52832 1.92871C5.23828 1.11162 7.50736 1.34804 9.63184 3.65625L10 4.05566L10.3682 3.65625Z"/>
-                  </svg>
-                </div>
-              <div class="profile-box">
-                <div class="list-profile">
-                <img src="../assets/img/images/profile-M.png" alt="profile-M">
-                <span class="name">공식남</span>
-                </div>
-                <p class="font14">레스토랑 · 송리단길 · 로맨틱파티룸</p>
-                <p class="font13">3스팟 · 4h20m · 도보 12.4km</p>
+        <h2>여친 몰래 준비한 성공 확률 1000% 데이트코스</h2>
+        <div class="main-box">
+          <div class="main-box2">
+                <img class="coursemain" src="../assets/img/images/course01.png" alt="course01">
+              <div class="icon-heart-wish">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10.3682 3.65625C12.4926 1.34806 14.7617 1.11218 16.4717 1.92969C18.22 2.76564 19.5 4.75317 19.5 7.12012C19.5 11.9163 15.737 14.4664 12.7197 16.9512V16.9521C12.1963 17.3845 11.7135 17.7766 11.2441 18.0635C10.7739 18.3508 10.3674 18.5 10 18.5C9.63273 18.5 9.22622 18.3509 8.75586 18.0635C8.28637 17.7766 7.80388 17.3846 7.28027 16.9531C4.26373 14.4659 0.50007 11.9164 0.5 7.11914C0.5 4.75165 1.78005 2.76427 3.52832 1.92871C5.23828 1.11162 7.50736 1.34804 9.63184 3.65625L10 4.05566L10.3682 3.65625Z"/>
+                </svg>
               </div>
+            <div class="profile-box">
+              <div class="list-profile">
+              <img src="../assets/img/images/profile-M.png" alt="profile-M">
+              <span class="name">공식남</span>
+              </div>
+              <p class="font14">레스토랑 · 송리단길 · 로맨틱파티룸</p>
+              <p class="font13">3스팟 · 4h20m · 도보 12.4km</p>
             </div>
           </div>
-        </a>
+        </div>
         <div class="line-thin"></div>
         <!-- 리스트 -->
         <div class="list-king">
@@ -184,7 +188,7 @@
               <div class="right-text">
                 <div class="right-frist-text">
                   <h3 class="title-color">SPOT 2</h3>
-                  <p>송리단 길</p>
+                  <p>송리단길</p>
                 </div>
                 <div class="right-two-text">
                   <p>조용한 골목 카페 · 와인바가 이어지는 스트리트</p>
@@ -214,6 +218,7 @@
             </div>
           </div>
         </div>
+        <a data-link href="/detail-course" class="btn stroke course-btn">코스 상세보기 <i class="fa-solid fa-chevron-right"></i></a>
       </div>
 
       <div id="tab2" data-order="tab2">
@@ -322,6 +327,7 @@
             </div>
           </div>
         </div>
+        <a href="#none" class="btn stroke course-btn">코스 상세보기 <i class="fa-solid fa-chevron-right"></i></a>
       </div>
 <!-- ---------------------------------------------- -->
       <div id="tab3" data-order="tab3">
@@ -430,6 +436,7 @@
             </div>
           </div>
         </div>
+        <a href="#none" class="btn stroke course-btn">코스 상세보기 <i class="fa-solid fa-chevron-right"></i></a>
       </div>
 <!-- ----------------------------------------- -->
       <div id="tab4" data-order="tab4">
@@ -518,10 +525,46 @@
             </div>
           </div>
         </div>
+        <a href="#none" class="btn stroke course-btn">코스 상세보기 <i class="fa-solid fa-chevron-right"></i></a>
       </div>
     </div>
   </div>
 </section>
+
+<!-- 동영상 모달 -->
+<div class="video-modal">
+  <div class="video-thumb thumb modal">
+    <video src="/assets/img/video/video01.mp4" autoplay muted playsinline loop></video>
+    <div class="video-inner">
+      <div class="video-btn-top">
+        <button class="video-close">
+          <svg width="25" height="25" viewBox="0 0 25 25"><path d="M7.18494 22.5218L21.5193 8.18745"/><path d="M21.5217 22.5218L7.18739 8.18745"/></svg>
+        </button>
+        <div class="video-top">
+          <div class="video-profile">
+            <img src="/assets/img/images/profile-M.png" alt="profile-M">
+            <span class="name">공식남</span>
+          </div>
+          <div class="icon-heart-wish">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M10.3682 3.65625C12.4926 1.34806 14.7617 1.11218 16.4717 1.92969C18.22 2.76564 19.5 4.75317 19.5 7.12012C19.5 11.9163 15.737 14.4664 12.7197 16.9512V16.9521C12.1963 17.3845 11.7135 17.7766 11.2441 18.0635C10.7739 18.3508 10.3674 18.5 10 18.5C9.63273 18.5 9.22622 18.3509 8.75586 18.0635C8.28637 17.7766 7.80388 17.3846 7.28027 16.9531C4.26373 14.4659 0.50007 11.9164 0.5 7.11914C0.5 4.75165 1.78005 2.76427 3.52832 1.92871C5.23828 1.11162 7.50736 1.34804 9.63184 3.65625L10 4.05566L10.3682 3.65625Z"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="video-bottom">
+        <div class="vidio-title">
+          <p>여친 몰래 준비한 성공확률 1,000% 데이트코스</p>
+          <div class="video-more">
+            <span></span> <span></span> <span></span>
+          </div>
+        </div>
+        <p class="video-play">1,010</p>
+        <a data-link href="/detail-course" class="btn stroke course-btn">코스 상세보기 <i class="fa-solid fa-chevron-right"></i></a>
+      </div>
+    </div>
+  </div>
+</div>
 
 <section>
 <footer>

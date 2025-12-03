@@ -175,11 +175,13 @@ export default{
     });
 
     // 비디오 모달 열기/닫기
-    const videoSelect = document.querySelector('.video-list li.select');
+    const videoItems = document.querySelectorAll('.video-list li');
     const videoCloseBtn = document.querySelector('.video-close');
-    if (videoSelect) {
-      videoSelect.addEventListener('click', () => {
-        document.body.classList.add('video-active');
+    if (videoItems.length > 0) {
+      videoItems.forEach(item => {
+        item.addEventListener('click', () => {
+          document.body.classList.add('video-active');
+        });
       });
     }
     if (videoCloseBtn) {
@@ -193,6 +195,7 @@ export default{
       }
     });
     
+    //팝업모달
     $(function(){
       // localStorage 체크
       if (localStorage.getItem("dontShowPopup") === "true") {

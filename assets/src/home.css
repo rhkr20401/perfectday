@@ -603,12 +603,12 @@ body.video-active .video-modal{display: block;}
 }
 .pop-up img{
   display: block;
-  width: 39rem;
-  height: 30rem;
+  width: 35rem;
+  height: 100%;
   margin: auto;
 }
 .pop-up-btn{
-  width: 39rem;
+  width: 35rem;
   height: 4rem;
   display: flex;
   justify-content: space-evenly;

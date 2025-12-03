@@ -86,5 +86,26 @@ document.querySelectorAll('.rating').forEach(rating => {
   });
 });
 
+  // 비디오 모달 열기/닫기
+  const videoItems = document.querySelectorAll('.video_box li');
+  const videoCloseBtn = document.querySelector('.video-close');
+  if (videoItems.length > 0) {
+    videoItems.forEach(item => {
+      item.addEventListener('click', () => {
+        document.body.classList.add('video-active');
+      });
+    });
+  }
+  if (videoCloseBtn) {
+    videoCloseBtn.addEventListener('click', () => {
+      document.body.classList.remove('video-active');
+    });
+  }
+  document.addEventListener('click', (e) => {
+    if (e.target.closest('.course-btn')) {
+      document.body.classList.remove('video-active');
+    }
+  });
+
   }
 };
