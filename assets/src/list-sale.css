@@ -18,9 +18,13 @@
   p{cursor: pointer;}
 }
 .sale-list{
-  margin-bottom: 2rem;
+  margin-bottom: 4rem;
 }
 section.first-section{padding-top: 2.5rem;}
+.sale-cost-title{
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
 .chips {
   display: flex;
   overflow-x: auto;
