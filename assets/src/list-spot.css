@@ -17,6 +17,7 @@ section.first-section{padding-top: 2.5rem;}
   display: flex;
   justify-content: center;
   align-items: center;
+  p{cursor: pointer;}
 }
 .spot-list{
   margin-bottom: 2rem;

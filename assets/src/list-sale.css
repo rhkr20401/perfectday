@@ -15,6 +15,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  p{cursor: pointer;}
 }
 .sale-list{
   margin-bottom: 2rem;
