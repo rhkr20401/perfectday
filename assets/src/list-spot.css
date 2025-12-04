@@ -1,0 +1,49 @@
+section.first-section{padding-top: 2.5rem;}
+
+.spot-list-title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.spot-list-title-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.spot-list-title-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p{cursor: pointer;}
+}
+.spot-list{
+  margin-bottom: 2rem;
+}
+.chips {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  user-select: none;
+  scrollbar-width: none;
+  margin-bottom:1rem ;
+  padding-bottom: 0.2rem;
+}
+.chips::-webkit-scrollbar {
+  display: none;
+}
+.chips li {
+  flex-shrink: 0;
+}
+.chips li[data-category="winter"].active {
+  background-color: #3FA2FF; 
+  border: 0.07rem solid #3FA2FF; 
+}
+/* sale-mark */
+.sale-mark{
+  position: absolute; 
+  top: 0;
+  left: 0.6rem;
+}

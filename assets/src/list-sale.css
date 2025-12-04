@@ -1,0 +1,39 @@
+.sale-list-title{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.sale-list-title-left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+.sale-list-title-right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  p{cursor: pointer;}
+}
+.sale-list{
+  margin-bottom: 4rem;
+}
+section.first-section{padding-top: 2.5rem;}
+.sale-cost-title{
+  color: var(--primary);
+  margin-bottom: 2rem;
+}
+.chips {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  user-select: none;
+  scrollbar-width: none;
+  margin-bottom:1rem ;
+  padding-bottom: 0.2rem;
+}
+.chips li {
+  flex-shrink: 0;
+}

@@ -1,0 +1,302 @@
+section{padding-top: 2.5rem;}
+.calendar-wrapper{
+  .calendar-weekdays, .calendar-body{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    column-gap: 0;
+    row-gap: 0;
+  }
+  .calendar-weekdays div{
+    font-family: 'Paperozi';
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary-text);
+  }
+}
+
+.calendar-header{
+  cursor: pointer;
+  margin-bottom: 2rem;
+}
+.calendar-header .current-month{
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.calendar-header .current-month #monthLabel{    
+  font-family: 'Paperozi';
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.calendar-header .current-month .month-arrow{
+  width: 2rem;
+  height: 2rem;
+  object-fit: contain;
+}
+
+.calendar-wrapper .line-thin.topline{margin-bottom: 1.5rem;}
+.calendar-wrapper .line-thin.bottomline{margin-top: 1.5rem;}
+
+.calendar-wrapper .calendar-weekdays,
+.calendar-wrapper .calendar-body{
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+}
+
+.calendar-wrapper .calendar-weekdays div{
+  padding: 1.5rem;
+  border-bottom: 0.1rem solid var(--gray200);
+  border-top: 0.1rem solid var(--gray200);
+}
+
+.date-cell{
+  height: 4.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.2rem 0;
+  position: relative;
+  cursor: pointer;
+}
+.date-cell:hover{background: var(--gray200);}
+.date-num{
+  z-index: 2;
+  font-family: 'Paperozi';
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.other-month .date-num{
+  color: var(--gray300);
+  font-family: 'Paperozi';
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+
+.date-cell.event-single .date-num{
+  background: var(--playicon-sub);
+  width: 4.2rem;
+  height: 4.2rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.date-cell.event-range:before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 4.2rem;
+  left: 0;
+  right: 0;
+  background: var(--variant);
+  z-index: 1;
+}
+
+.date-cell.range-start:before{border-radius: 2.1rem 0 0 2.1rem;}
+.date-cell.range-middle:before{border-radius: 0;}
+.date-cell.range-end:before{border-radius: 0 2.1rem 2.1rem 0;}
+.date-cell.event-single.event-range .date-num{
+  background: var(--primary);
+  color: var(--white);
+}
+
+.calendar-wrapper .line-thick{margin: 1.8rem 0 2rem;}
+.selected-date-text{
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+}
+.event-text.empty-text{font-size: 1.4rem;}
+
+.selected-date-text .selected-weekday{
+  display: inline;
+  margin-left: 0.4rem;
+  font-size: 1.3rem;
+  color: var(--primary-text);
+  vertical-align: baseline;
+}
+.event-list{
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+.course-list{
+  display: flex;
+  flex-direction: column;
+}
+.course-list .course-item{
+  display: flex;
+  align-items: center;
+}
+.course-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.course-step{
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 50%;
+  color: var(--white);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+}
+.course-step.step-1{background-color: var(--primary);}
+.course-step.step-2{background-color: var(--cafeicon);}
+.course-step.step-3{background-color: var(--playicon);}
+.course-time{
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--secondary-text);
+}
+.course-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-left: 1rem;
+}
+.course-place{
+  font-weight: 400;
+  font-size: 1.7rem;
+}
+.course-location{
+  display: flex;
+  align-items: flex-start;
+  font-size: 1.3rem;
+  color: var(--primary-text);
+  position: relative;
+  padding-left: 1.7rem;
+}
+.course-location:before{
+  content: "";
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  background-image: url("/assets/img/svg/icon-map-gray.svg");
+  background-size: contain;
+  background-repeat: no-repeat
+}
+.add-event-btn{
+  width: 100%;
+  margin-bottom: 3rem;
+  padding: 1rem 0;
+  display: inline-block;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: 'Paperozi';
+  border-radius: 0.5rem;
+  text-align: center;
+  border: 0.2rem solid var(--secondary);
+  cursor: pointer;
+}
+.month-picker-backdrop{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  /* display: none; */
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-bottom: 7.5rem;
+  z-index: 50;
+  background: rgba(0,0,0,0);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .35s ease;
+}
+.month-picker-backdrop.open{
+  opacity: 1;
+  background: rgba(0,0,0,0.55);
+  pointer-events: auto;
+}
+.month-picker-panel{
+  width: 100%;
+  background: var(--white);
+  border-radius: 2rem 2rem 0 0;
+  box-shadow: 0 -0.8rem 2.4rem rgba(0, 0, 0, 0.2);
+  padding: 2rem 2rem 2rem;
+  margin-bottom: 7.5rem;
+  transform: translateY(100%);
+  transition: transform .35s ease;
+}
+.month-picker-backdrop.open .month-picker-panel{
+  transform: translateY(0);
+}
+.month-picker-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mp-title{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.mp-cancel{
+  font-size: 1.2rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10rem;
+  background: var(--white);
+  color: var(--secondary-text);
+  border: 0.1rem solid var(--gray300);
+  cursor: pointer;
+}
+
+.mp-year-row{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  margin-bottom: 1rem;
+}
+.mp-year-btn{
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 10rem;
+  background: var(--gray300);
+  cursor: pointer;
+  border: none;
+}
+.mp-year-label{
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+.mp-month-grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+.mp-month-grid button{
+  border-radius: 10rem;
+  border: 0.1rem solid var(--gray300);
+  padding: 0.8rem 0;
+  font-size: 1.4rem;
+  background: var(--gray100);
+  cursor: pointer;
+}
+.mp-month-grid button.active {
+  background: var(--primary);
+  color: var(--white);
+  border-color: var(--primary);
+}
+.mp-footer{
+  display: flex;
+  justify-content: flex-end;
+}
+.mp-confirm{
+  font-size: 1.2rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: 10rem;
+  background: var(--primary);
+  color: var(--white);
+  cursor: pointer;
+  border: none;
+}

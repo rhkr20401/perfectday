@@ -1,0 +1,75 @@
+.book-list-title-top{
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  h2 b{
+    color: var(--primary);
+  }
+}
+.book{
+  border: 1px solid var(--gray100);
+  padding: 1.2rem 1rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+}
+.book:first-of-type{margin-bottom: 2rem;}
+
+.book-card{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+}
+.book-stat{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+.book-inner{
+  height: 15rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--gray100);
+}
+.book-inner-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0 2rem;
+}
+.book-inner-right{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.book-text{
+  font-family: 'Pretendard';
+  font-weight: 400;
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.book-text:last-of-type{gap: 0.7rem;}
+.book-cost{
+  font-weight: 600;
+}
+img{
+  position: relative;
+}
+/* sale-mark */
+.sale-mark{
+  position: absolute; 
+  top: 0;
+  left: 0.6rem;
+}
+
+section.first-section{padding-top: 2.5rem; margin-bottom: 2rem;}

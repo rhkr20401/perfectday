@@ -91,8 +91,17 @@ input,button,select,textarea{
 }
 p{word-break: keep-all;}
 h1{font-size: 100%;font: inherit;}
-button{cursor: pointer;}
-
+button{cursor: pointer; color: var(--primary-text);}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  border-radius: 0;
+  -webkit-appearance: none;
+  appearance: none;
+}
+h1{margin: 0;}
 
 
 /* common______________________________ */
@@ -123,7 +132,7 @@ button{cursor: pointer;}
 /* top */
 .top{
   position: fixed;
-  bottom: 11rem;
+  bottom: 9.5rem;
   right: 2rem;
   display: block;
   width: 4rem;
@@ -140,9 +149,11 @@ button{cursor: pointer;}
 
 
 /* section공통 */
-section{
-  width: 100%;
+.app{
+  padding-top: 5.5rem;
 }
+section{width: 100%;}
+section:last-of-type{padding-bottom: 7.5rem;}
 .inner{
   padding: 0 2rem;
   margin: auto;
@@ -158,7 +169,7 @@ section{
   background-clip: text;
   font-family: 'Paperozi';
 }
-.section-title-sub{font-family: 'Pretendard'; font-size: 1.3rem; color: var(--secondary-text);}
+.section-title-sub{font-family: 'Pretendard'; font-size: 1.3rem; font-weight: 500; color: var(--secondary-text);}
 .content-text{font-family: 'Pretendard'; font-size: 1.4rem; line-height: 150%; letter-spacing: -3%;}
 
 /* button */
@@ -246,6 +257,7 @@ section{
   font-family: 'Paperozi';
   font-size: 1.4rem;
   display: flex;
+  align-items: center;
   column-gap: 0.5rem;
   border: 0.07rem solid var(--gray400);
   border-radius: 10rem;
@@ -256,10 +268,11 @@ section{
 .chips li img{transition: filter 0.2s ease-in-out;}
 
 /* img */
-button.icon-heart-wish path{
+.icon-heart-wish path{
   fill: rgba(0,0,0,0.5);
   stroke: var(--white);
   transition: 0.2s ease-in-out;
+  cursor: pointer;
 }
 
 .img-thumb{
@@ -273,7 +286,7 @@ button.icon-heart-wish path{
     height: inherit;
     object-fit: cover;
   }
-  button.icon-heart-wish{
+  .icon-heart-wish{
     position: absolute;
     right: 0.5rem;
     top: 0.5rem;
@@ -330,7 +343,6 @@ button.icon-heart-wish path{
       }
     }
   }
-  
 }
 .video-bottom{
   color: var(--white);
@@ -414,7 +426,6 @@ button.icon-heart-wish path{
 /* rating-star */
 .star-rate{
   display: flex;
-  align-items: center;
   column-gap: 0.2rem;
 }
 .rating{
@@ -453,7 +464,7 @@ button.icon-heart-wish path{
     font-weight: 600;
     color: var(--white);
     line-height: 1.2rem;
-    padding-top: 0.4rem;
+    padding-top: 0.6rem;
   }
 }
 
@@ -663,7 +674,6 @@ button.icon-heart-wish path{
   align-items: center;
   column-gap: 0.2rem;
   font-size: 1.2rem;
-  margin-bottom: 0.5rem;
   color: var(--secondary-text);
 }
 .makecourse-txt .book-chip{
@@ -870,7 +880,7 @@ aside .aside-btn .btn.half{
   position: fixed;
   bottom: 0;
   width: 100%;
-  height: 9rem;
+  height: 7.5rem;
   background-color: var(--white);
   border-top: 0.1rem solid var(--bg);
   z-index: 100;
@@ -880,27 +890,22 @@ aside .aside-btn .btn.half{
   justify-content: center;
   li{
     flex: 1;
-    padding-top: 0.7rem;
+    padding-top: 1rem;
     text-align: center;
     p{
       font-family: 'Paperozi';
       font-size: 1.2rem;
-      font-weight: 500;
-      color: var(--variant);
+      font-weight: 600;
+      color: var(--primary);
       margin-top: 0.5rem;
       transition: 0.2s ease-in-out;
     }
   }
 }
 
-
-
-
-
-
 /* active가 붙었을 때 */
 /* icon-heart-wish */
-button.icon-heart-wish.active path{fill: var(--primary); stroke: var(--primary);}
+.icon-heart-wish.active path{fill: var(--primary); stroke: var(--primary);}
 
 /* chip */
 .chips li.active{
@@ -911,10 +916,9 @@ button.icon-heart-wish.active path{fill: var(--primary); stroke: var(--primary);
 .chips li.active img{filter: brightness(3);}
 
 /* tab-menu */
+.tab-menu li.active{color: var(--primary-text);}
 .tab-menu li.active:after{
-  /* border-bottom: 0.2rem solid var(--primary); */
   width: 100%;
-  color: var(--primary-text);
 }
 
 /* footer company */
@@ -922,6 +926,7 @@ footer .company.active i{transform: rotate(180deg);}
 
 /* index CSS-------- */
 /* header */
+body.aside-active{overflow: hidden;}
 body.aside-active aside{left: 0;}
 
 /* hover effect */
@@ -933,4 +938,4 @@ aside .aside-btn .btn.half:hover{
   background-color: var(--primary);
   color: #fff;
 }
-.bottom-nav-menu li:hover a p{color: var(--primary);}
+
