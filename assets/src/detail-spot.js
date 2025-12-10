@@ -112,7 +112,6 @@ export default{
     const overlay = document.querySelector('.book-overlay');
     const bookCloseBtn = document.querySelector('.book-close');
     const cancelBtn = document.querySelector('.book-close2');
-    const bookSubmitBtn = document.querySelector('.book-btn-wrap .primary');
 
     let picker = null;
     const today = new Date();
@@ -160,7 +159,6 @@ export default{
     overlay.addEventListener('click', closeBookModal);
     bookCloseBtn.addEventListener('click', closeBookModal);
     cancelBtn.addEventListener('click', closeBookModal);
-    bookSubmitBtn.addEventListener('click', closeBookModal);
 
     modal.addEventListener('click', (e) => {
       e.stopPropagation();
@@ -190,6 +188,24 @@ export default{
         $('.time').removeClass('active');
         $(this).addClass('active');
       });
+    });
+    //예약 확인 모달
+    //모달 열기
+    $("#book-complete-btn").on('click',function(e){
+      e.preventDefault();
+      $('.book-complete-modal').fadeIn();
+    });
+
+    //모달 안 확인 버튼
+    $(document).on('click', '.book-complete-modal-btn', function(e){
+      e.preventDefault();
+      window.location.href = '/list-book';
+    });
+
+    //모달 안 취소 버튼
+    $(document).on('click', '.book-complete-modal-btn-cancel', function(e){
+      e.preventDefault();
+      $('.book-complete-modal').fadeOut();
     });
   }
 }

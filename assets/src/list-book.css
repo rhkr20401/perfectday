@@ -1,3 +1,12 @@
+.count{
+  margin-bottom: 1rem;
+  font-family: 'Paperozi';
+  font-size: 1.4rem;
+  font-weight: 500;
+  b{color: var(--primary);}
+}
+.line-thin{margin-bottom: 2rem;}
+.book-sale-list{margin-bottom: 5rem;}
 .book-list-title-top{
   width: 100%;
   display: flex;
@@ -5,7 +14,7 @@
   align-items: center;
   text-align: center;
   gap: 0.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   h2 b{
     color: var(--primary);
   }
@@ -16,7 +25,6 @@
   border-radius: 1rem;
   margin-bottom: 2rem;
 }
-.book:first-of-type{margin-bottom: 2rem;}
 
 .book-card{
   display: flex;
@@ -72,4 +80,4 @@ img{
   left: 0.6rem;
 }
 
-section.first-section{padding-top: 2.5rem; margin-bottom: 2rem;}
+section.first-section{padding-top: 2.5rem; margin-bottom: 3rem;}

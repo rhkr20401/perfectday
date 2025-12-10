@@ -392,7 +392,7 @@
             </a>
           </li>
         </ul>
-        <a href="#none" class="btn stroke course-btn">코스 더보기 <i class="fa-solid fa-chevron-right"></i></a>
+        <a data-link href="/list-course" class="btn stroke course-btn">코스 더보기 <i class="fa-solid fa-chevron-right"></i></a>
       </div>
     </div>
   </div>
@@ -501,7 +501,7 @@
             <img src="/assets/img/svg/icon-food-color-secondary.svg" alt="맛집 아이콘">
             <span>핏제리아오 대학로 본점</span>
           </div>
-            <p class="section-title-sub dark-text">2025.11.18(화) · 12:00</p>
+            <p class="section-title-sub dark-text">2025.11.20(목) · 18:00</p>
         </li>
       </ul>
     </div>
@@ -510,12 +510,29 @@
     <div class="inner">
       <div class="half-btn-wrap">
         <a href="#none" class="btn half book-close2">취소</a>
-        <a href="#none" class="btn half primary">예약하기</a>
+        <a href="#none" class="btn half primary" id="book-complete-btn">예약하기</a>
       </div>
     </div>
   </div>
 </div>
 
+<!-- 예약 팝업 -->
+<div class="book-complete-modal">
+  <div class="book-complete-content">
+    <h5>원클릭 예약 내역</h5>
+    <div class="complete-content">
+      <p class="content-text"><b>인원</b>2명</p>
+      <div class="line-thin"></div>
+      <p class="content-text"><b>핏제리아오 대학로 본점</b>2025. 11. 20.(목) 18:00</p>
+      <div class="line-thin"></div>
+      <p>위 정보로 예약하시겠습니까?</p>
+    </div>
+    <div class="half-btn-wrap">
+      <a href="#none" class="btn half book-complete-modal-btn-cancel">취소</a>
+      <a data-link href="/list-book" class="btn half primary book-complete-modal-btn">확인</a>
+    </div>
+  </div>
+</div>
 
 <!-- footer --> 
 <section>
